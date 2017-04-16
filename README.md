@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 [left]: ./examples/left.png "left Image"
 [center]: ./examples/center.png "center Image"
 [right]: ./examples/right.png "right Image"
-[simulator]: ./examples/simulator.jpg "simulator Image"
+[simulator]: ./examples/simulator.jpeg "simulator Image"
 [rightcamunflipped]: ./examples/rightcamunflipped.png "unflipped image"
 [title]: ./examples/title.png "title image"
 
