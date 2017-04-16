@@ -27,9 +27,9 @@ The goals / steps of this project are the following:
 
 ## [Watch the successful autonomous lap around the track!](https://youtu.be/UvFYcYJkhoM)
 
-[![alt text][title]](https://youtu.be/UvFYcYJkhoM)
+[![alt text][title]](https://youtu.be/ftG8raDrU0Q)
 
-## [Here is the cockpit view version](https://youtu.be/ftG8raDrU0Q)
+## [Here is the cockpit view version](https://youtu.be/UvFYcYJkhoM)
 
 ### **Rubric Points**
 #### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
