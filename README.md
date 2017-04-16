@@ -68,7 +68,7 @@ The model.py file contains the code for training and saving the convolution neur
 
 #### 1. An appropriate model architecture has been employed
 
-My model consists of a convolution neural network with a lambda layer for normalizing the images, then three layers of 5x5 filters and two layers of 3x3 filters. The filter depths begin at 24 and end at 64. Finally I finish with four flattened step down layers of depth 100, 50, 10, and 1. This is based on the Nvidia end-to-end training model. (model.py lines 107-136)
+My model consists of a convolution neural network with a lambda layer for normalizing the images, then three layers of 5x5 filters and two layers of 3x3 filters. The filter depths begin at 24 and end at 64. Each convolutional layer includes a max pooling with strides of 2x2. Finally I finish with four flattened step down layers of depth 100, 50, 10, and 1. This is based on the Nvidia end-to-end training model. (model.py lines 107-136)
 
 To ensure the model can handle non-linearities each convolutional layer is activated by a rectified linear unit (ReLU). ReLU layers ensure that the derivative can be back-propogated for error reduction between epochs. This is the key to iterative learning of the model.
 
