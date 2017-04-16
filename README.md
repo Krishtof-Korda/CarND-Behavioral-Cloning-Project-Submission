@@ -25,7 +25,7 @@ The goals / steps of this project are the following:
 [title]: ./examples/title.png "title image"
 
 
-## [Watch the successful autonomous lap around the track!](https://youtu.be/UvFYcYJkhoM)
+## [Watch the successful autonomous lap around the track!](https://youtu.be/ftG8raDrU0Q)
 
 [![alt text][title]](https://youtu.be/ftG8raDrU0Q)
 
