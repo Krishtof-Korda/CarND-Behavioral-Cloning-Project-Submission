@@ -45,6 +45,12 @@ My project includes the following files:
 * model.h5 containing a trained convolution neural network 
 * writeup_report.md or writeup_report.pdf summarizing the results
 
+model.py should be executed from the command line with the following code:
+
+```
+python model.py --load 'model.h5' --save 'model_new.h5' --epochs 10 --batch_size 6
+```
+
 #### 2. Submission includes functional code
 Using the Udacity provided simulator ( [Windows](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58ae4419_windows-sim/windows-sim.zip), [MacOS](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58ae4594_mac-sim.app/mac-sim.app.zip), [Linux](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58ae46bb_linux-sim/linux-sim.zip) ) and my drive.py file, the car can be driven autonomously around the track by executing 
 ```sh
@@ -147,6 +153,8 @@ So I then took the advice from class and started teaching some recovery which wa
 
 I also trained the car to properly turn by creeping very slowly through turns which gave me a lot of images in turns to train the model. I especially had to show it many examples of the turn with the dirt road on the side. It kept trying to veer off the road into the dirt.
 
+I did a few complete laps on track 2 to try and generalize the model so it did not 'memorize' track 1. I found that it hurt the performance on track 1. I also could not get the car to drive on track 2. Given more time I would collect more data on track 2 and try to make a successful run. 
+
 I did some data augmentations as recommended in class. I doubled the data set by flipping all images and keeping the originals. The rationale for this was that I could drive one direction around the track and it would learn to steer in both directions instead of just turning left. I had to multiply the steer angle by -1 when the image was flipped so it knew the proper way to turn in those cases.
 
 Original: ![alt text][rightcamunflipped] Flipped:![alt text][flipped]
@@ -155,6 +163,8 @@ I also added all three camera angles adding a correction factor of 0.05 plus for
 
 left cam:![alt text][left]center cam:![alt text][center] right cam:![alt text][right]
 
-I shuffled the data set each time prior to training and set aside 20% for validation. I used a batch size of  `Batch size =  6  * 3cams  * 2 for flips =  36`. Since I used an Amazon Web Services GPU I was able to run 10 epochs very quickly. Error was continually reduces across the 10 epochs with a few exceptions.
+I also cropped the images by 60 pixels from the top and 20 from the bottom. This got rid of the sky and hood of the car. I think this cropping hurt the model's ability to drive on track 2 since there is a lot of steep hills which got cropped out.
 
+Lastly, I shuffled the data set each time prior to training and set aside 20% for validation. I used a batch size of  `Batch size =  6  * 3cams  * 2 for flips =  36`. Since I used an Amazon Web Services GPU I was able to run 10 epochs very quickly. Error was continually reduces across the 10 epochs with a few exceptions.
 
+This was another fun project and as always I thank the creators for the time and effort they put into making this.
