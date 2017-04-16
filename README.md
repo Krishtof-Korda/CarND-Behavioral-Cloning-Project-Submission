@@ -1,4 +1,4 @@
-#**Autonomous Simulator Driving Using Convolutional Neural Networks** 
+# **Autonomous Simulator Driving Using Convolutional Neural Networks** 
 
 ---
 
